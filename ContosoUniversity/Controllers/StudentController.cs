@@ -11,7 +11,7 @@ using ContosoUniversity.Models;
 using PagedList;
 using System.Data.Entity.Infrastructure;
 
-namespace ContosoUniversity.Controllers
+namespace UniversityProject.Controllers
 {
     public class StudentController : Controller
     {
@@ -93,7 +93,6 @@ namespace ContosoUniversity.Controllers
 
         // POST: Student/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "LastName, FirstMidName, EnrollmentDate")] Student student)
@@ -198,7 +197,6 @@ namespace ContosoUniversity.Controllers
             }
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
